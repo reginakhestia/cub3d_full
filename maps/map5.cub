@@ -1,7 +1,10 @@
 NO ./textures/brick.xpm
 SO ./textures/stone.xpm
+
+
 WE ./textures/wood.xpm
 EA ./textures/grey.xpm
+
 
 F 200,150,90
 C 205,240,255

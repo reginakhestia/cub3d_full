@@ -6,7 +6,7 @@
 /*   By: khestia <khestia@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 00:01:01 by hestia            #+#    #+#             */
-/*   Updated: 2022/04/12 10:14:28 by khestia          ###   ########.fr       */
+/*   Updated: 2022/04/12 11:29:02 by khestia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ int	cub_parse(t_all *all, char *file)
 			free(line);
 			return (cub_return_error(0));
 		}
+		free(line);
 	}
 	close(fd);
 	if (gnl_return == -1)

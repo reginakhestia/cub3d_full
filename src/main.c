@@ -6,7 +6,7 @@
 /*   By: khestia <khestia@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 00:01:01 by hestia            #+#    #+#             */
-/*   Updated: 2022/04/12 10:10:10 by khestia          ###   ########.fr       */
+/*   Updated: 2022/04/12 11:59:43 by khestia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	cub_close(t_all *all, int win_destroy)
 	free(all->tex.ea);
 	if (win_destroy == 1)
 		mlx_destroy_window(all->mlx.ptr, all->win.ptr);
-	free(all->mlx.ptr);
 	write(1, "Exit: Program closed\n", 21);
 	exit(0);
 	return (1);

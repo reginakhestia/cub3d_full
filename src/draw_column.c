@@ -6,7 +6,7 @@
 /*   By: khestia <khestia@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 00:01:01 by tune              #+#    #+#             */
-/*   Updated: 2022/04/12 10:16:10 by khestia          ###   ########.fr       */
+/*   Updated: 2022/04/12 11:53:31 by khestia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,22 +84,24 @@ int	cub_walls_errors(t_all *all, int i, int j)
 		return (-1);
 	else if (all->map.tab[i + 1][j] == '\0'
 		|| all->map.tab[i][j + 1] == '\0'
-		|| all->map.tab[i + 1][j + 1] == '\0')
+		|| all->map.tab[i + 1][j + 1] == '\0'
+		|| all->map.tab[i + 1][j - 1] == '\0')
 		return (-1);
 	else if (all->map.tab[i - 1][j] == '\0'
 		|| all->map.tab[i][j - 1] == '\0'
-		|| all->map.tab[i - 1][j - 1] == '\0')
+		|| all->map.tab[i - 1][j - 1] == '\0'
+		|| all->map.tab[i - 1][j + 1] == '\0')
 		return (-1);
 	else if (all->map.tab[i + 1] == NULL
 		|| all->map.tab[i - 1] == NULL)
 		return (-1);
-	else if (all->map.tab[i + 1][j] == ' '
-		|| all->map.tab[i][j + 1] == ' '
-		|| all->map.tab[i + 1][j + 1] == ' ')
+	else if (all->map.tab[i + 1][j] == ' ' || all->map.tab[i][j + 1] == ' '
+		|| all->map.tab[i + 1][j + 1] == ' '
+		|| all->map.tab[i + 1][j - 1] == ' ')
 		return (-1);
-	else if (all->map.tab[i - 1][j] == ' '
-		|| all->map.tab[i][j - 1] == ' '
-		|| all->map.tab[i - 1][j - 1] == ' ')
+	else if (all->map.tab[i - 1][j] == ' ' || all->map.tab[i][j - 1] == ' '
+		|| all->map.tab[i - 1][j - 1] == ' '
+		|| all->map.tab[i - 1][j + 1] == ' ')
 		return (-1);
 	return (0);
 }
